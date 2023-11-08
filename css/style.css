@@ -33,6 +33,30 @@
   border: 1px solid white;
   border-radius: inherit;
   overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.card-brand::before {
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transform: scale(0);
+  background-color: hsla(178, 100%, 50%, 0.4);
+  background-image: url("../assets/images/icon-view.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 0.6s ease;
+}
+
+.card-brand:hover::before {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .card-content {
@@ -45,6 +69,12 @@
 .card-title h1 {
   font-size: 1.6rem;
   font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: var(--cyan);
+  }
 }
 
 .card-paragraph {
@@ -118,6 +148,18 @@
 
     & span {
       color: var(--white);
+      cursor: pointer;
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: var(--cyan);
+      }
     }
+  }
+}
+
+@media screen and (min-width: 468px) {
+  :root {
+    --fsize: 18px;
   }
 }
