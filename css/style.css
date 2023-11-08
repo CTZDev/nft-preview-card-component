@@ -1,0 +1,17 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  /*(main BG)*/
+  --very-dark-blue: hsl(217, 54%, 11%);
+  /*(card BG)*/
+  --very-dark-blue: hsl(216, 50%, 16%);
+  /*(line)*/
+  --very-dark-blue: hsl(215, 32%, 27%);
+
+  /* --ffamily: ; */
+  --fsize: 18px;
+}
+
+.container {
+  font-size: var(--fsize);
+}
