@@ -27,17 +27,9 @@ ol[role="list"] {
   list-style: none;
 }
 
-/*Source of letters*/
-@font-face {
-  font-family: "hanken";
-  src: url("../assets/fonts/HankenGrotesk-VariableFont_wght.ttf");
-  font-weight: normal;
-}
-
 /* Set core root defaults */
 html {
   scroll-behavior: smooth;
-  font-family: 'hanken', Courier, monospace;
 }
 
 /* Set core body defaults */

@@ -1,17 +1,123 @@
 :root {
   --soft-blue: hsl(215, 51%, 70%);
   --cyan: hsl(178, 100%, 50%);
-  /*(main BG)*/
-  --very-dark-blue: hsl(217, 54%, 11%);
-  /*(card BG)*/
-  --very-dark-blue: hsl(216, 50%, 16%);
-  /*(line)*/
-  --very-dark-blue: hsl(215, 32%, 27%);
-
-  /* --ffamily: ; */
-  --fsize: 18px;
+  --very-dark-blue-main: hsl(217, 54%, 11%);
+  --very-dark-blue-card: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --ffamily: "Outfit", "Lucida Sans", sans-serif;
+  --fsize: 16px;
 }
 
 .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--very-dark-blue-main);
+}
+
+.card {
   font-size: var(--fsize);
+  font-family: var(--ffamily);
+  font-weight: 300;
+  padding: 24px;
+  margin: 0 24px;
+  border-radius: 16px;
+  background-color: var(--very-dark-blue-card);
+  color: var(--white);
+  max-width: 420px;
+}
+
+.card-brand {
+  border: 1px solid white;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 28px 0 14px 0;
+  border-bottom-color: hsla(215, 51%, 70%, 0.3);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+.card-title h1 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.card-paragraph {
+  padding: 24px 0;
+  line-height: 1.5;
+  color: var(--soft-blue);
+  font-weight: 300;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+
+  & p {
+    position: relative;
+    padding-left: 26px;
+
+    &::before {
+      content: "";
+      display: inline-flex;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 24px;
+    }
+  }
+}
+
+.card-details p:first-child {
+  color: var(--cyan);
+  font-weight: 600;
+
+  &::before {
+    background-image: url("../assets/images/icon-ethereum.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.card-details p:last-child {
+  color: var(--soft-blue);
+  font-weight: 600;
+
+  &::before {
+    background-image: url("../assets/images/icon-clock.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-top: 1rem;
+
+  & img {
+    width: 40px;
+    border-radius: 100vw;
+    border: 1px solid var(--white);
+  }
+
+  & p {
+    font-weight: normal;
+    color: var(--soft-blue);
+
+    & span {
+      color: var(--white);
+    }
+  }
 }
